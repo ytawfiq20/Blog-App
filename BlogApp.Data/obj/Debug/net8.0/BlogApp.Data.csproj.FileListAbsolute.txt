@@ -1,0 +1,14 @@
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Data\bin\Debug\net8.0\BlogApp.Data.deps.json
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Data\bin\Debug\net8.0\BlogApp.Data.runtimeconfig.json
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Data\bin\Debug\net8.0\BlogApp.Data.dll
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Data\bin\Debug\net8.0\BlogApp.Data.pdb
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Data\obj\Debug\net8.0\BlogApp.Data.csproj.AssemblyReference.cache
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Data\obj\Debug\net8.0\BlogApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Data\obj\Debug\net8.0\BlogApp.Data.AssemblyInfoInputs.cache
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Data\obj\Debug\net8.0\BlogApp.Data.AssemblyInfo.cs
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Data\obj\Debug\net8.0\BlogApp.Data.csproj.CoreCompileInputs.cache
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Data\obj\Debug\net8.0\BlogApp.Data.dll
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Data\obj\Debug\net8.0\refint\BlogApp.Data.dll
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Data\obj\Debug\net8.0\BlogApp.Data.pdb
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Data\obj\Debug\net8.0\BlogApp.Data.genruntimeconfig.cache
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Data\obj\Debug\net8.0\ref\BlogApp.Data.dll

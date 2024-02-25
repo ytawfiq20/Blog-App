@@ -1,0 +1,41 @@
+﻿@page "/Blog/{id}"
+@inject IBlog blogService
+@inherits ComponentBase
+@inject NavigationManager navigate
+
+<h3>Blog Info</h3>
+<hr />
+<a class="btn btn-primary" href="/AllBlogs" role="button">Go To Blogs Page</a>
+<EditForm Model="@blog" FormName="Starship3">
+    <div>
+        <label for="List Name"> Title </label>
+        <br />
+        <InputText @bind-Value="blog.Title" class="form-control" placeholder="Enter Title" disabled=@true />
+        <br />
+        <InputTextArea @bind-Value="blog.Description" class="form-control" placeholder="Enter Description" disabled=@true />
+    </div>
+</EditForm>
+<hr />
+<button class="btn btn-secondary" @onclick="()=>OnEditClick()">Edit Blog</button>
+<button class="btn btn-danger" @onclick="()=>OnDeleteClick()">Delete Blog</button>
+
+@code {
+    [Parameter]
+    public string id{ get; set; }
+    private Blog blog { get; set; } = new();
+
+    protected async override Task OnInitializedAsync()
+    {
+        blog = await blogService.GetBlogById(new Guid(id));
+    }
+
+    private void OnEditClick()
+    {
+        navigate.NavigateTo($"/EditBlog/{id}");
+    }
+
+    private void OnDeleteClick()
+    {
+        navigate.NavigateTo($"/DeleteBlog/{id}");
+    }
+}

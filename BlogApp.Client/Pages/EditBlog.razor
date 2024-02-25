@@ -1,0 +1,52 @@
+﻿@page "/EditBlog/{id}"
+
+@inject IBlog blogService
+@inherits ComponentBase
+@inject NavigationManager navigate
+
+<h3>Edit Blog</h3>
+<hr />
+@if (edited == true)
+{
+    <div class="alert alert-success" role="alert">
+        Blog updated successfully.
+    </div>
+    <a class="btn btn-primary" href="/AllBlogs" role="button">Go To Blogs Page</a>
+}
+else
+{
+    <EditForm Model="@blog" OnValidSubmit="Edit" FormName="Starship3">
+        <FluentValidationValidator />
+        <ValidationSummary />
+        <div>
+            <label for="List Name"> Title </label>
+            <br />
+            <InputText @bind-Value="blog.Title" class="form-control" placeholder="Enter Title" />
+            <ValidationMessage For="@(() => blog.Title)" />
+            <br />
+            <label for="List Day"> Description </label>
+            <br />
+            <InputTextArea @bind-Value="blog.Description" class="form-control" placeholder="Enter Description" />
+            <ValidationMessage For="@(() => blog.Description)" />
+            <br />
+            <button class="btn btn-success" type="submit">Edit Blog</button>
+        </div>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public string id{ get; set; }
+    private Blog blog { get; set; } = new();
+
+    protected async override Task OnInitializedAsync()
+    {
+        blog = await blogService.GetBlogById(new Guid(id));
+    }
+    private bool edited = false;
+    private async Task Edit()
+    {
+        await blogService.EditBlog(blog);
+        edited = true;
+    }
+}

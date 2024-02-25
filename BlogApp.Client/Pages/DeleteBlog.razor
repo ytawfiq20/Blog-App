@@ -1,0 +1,49 @@
+﻿@page "/DeleteBlog/{id}"
+
+@inject IBlog blogService
+@inherits ComponentBase
+@inject NavigationManager navigate
+
+<h3>DeleteBlog</h3>
+<hr />
+@if (deleted == true)
+{
+    <div class="alert alert-success" role="alert">
+        Blog deleted successfully.
+    </div>
+    <a class="btn btn-primary" href="/AllBlogs" role="button">Go To Blogs Page</a>
+}
+else
+{
+    <EditForm Model="@blog" OnValidSubmit="Delete" FormName="Starship3">
+        <div>
+            <label for="List Name"> Title </label>
+            <br />
+            <InputText @bind-Value="blog.Title" class="form-control" placeholder="Enter Title" disabled=@true />
+            <br />
+            <label for="List Day"> Description </label>
+            <br />
+            <InputTextArea @bind-Value="blog.Description" class="form-control" placeholder="Enter Description" disabled=@true />
+            <br />
+            <button class="btn btn-danger" type="submit">Delete Blog</button>
+        </div>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public string id { get; set; }
+    private Blog blog { get; set; } = new();
+
+    protected async override Task OnInitializedAsync()
+    {
+        blog = await blogService.GetBlogById(new Guid(id));
+    }
+    private bool deleted = false;
+
+    private async Task Delete()
+    {
+        await blogService.DeleteBlog(blog.Id);
+        deleted = true;
+    }
+}

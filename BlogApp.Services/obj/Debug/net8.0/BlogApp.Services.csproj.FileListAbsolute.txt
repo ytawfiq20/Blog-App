@@ -1,0 +1,11 @@
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Services\bin\Debug\net8.0\BlogApp.Services.deps.json
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Services\bin\Debug\net8.0\BlogApp.Services.dll
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Services\bin\Debug\net8.0\BlogApp.Services.pdb
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Services\obj\Debug\net8.0\BlogApp.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Services\obj\Debug\net8.0\BlogApp.Services.AssemblyInfoInputs.cache
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Services\obj\Debug\net8.0\BlogApp.Services.AssemblyInfo.cs
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Services\obj\Debug\net8.0\BlogApp.Services.csproj.CoreCompileInputs.cache
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Services\obj\Debug\net8.0\BlogApp.Services.dll
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Services\obj\Debug\net8.0\refint\BlogApp.Services.dll
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Services\obj\Debug\net8.0\BlogApp.Services.pdb
+D:\my_source_code\C#\BlogApp.Solution\BlogApp.Services\obj\Debug\net8.0\ref\BlogApp.Services.dll

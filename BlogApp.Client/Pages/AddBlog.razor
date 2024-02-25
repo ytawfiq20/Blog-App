@@ -1,0 +1,47 @@
+﻿@page "/AddBlog"
+@inject IBlog blogService
+@inherits ComponentBase
+@inject NavigationManager navigate
+
+<h3>Add Blog</h3>
+<hr />
+@if (saved == true)
+{
+    <div class="alert alert-success" role="alert">
+        Blog saved successfully.
+    </div>
+    <a class="btn btn-primary" href="/AllBlogs" role="button">Go To Blogs Page</a>
+}
+else
+{
+    <EditForm Model="@blog" OnValidSubmit="SaveBlog" FormName="Starship3">
+        <FluentValidationValidator />
+        <ValidationSummary />
+        <div>
+            <label for="List Name"> Title </label>
+            <br />
+            <InputText @bind-Value="blog.Title" class="form-control" placeholder="Enter Title" />
+            <ValidationMessage For="@(() => blog.Title)" />
+            <br />
+            <label for="List Day"> Description </label>
+            <br />
+            <InputTextArea @bind-Value="blog.Description" class="form-control" placeholder="Enter Description" />
+            <ValidationMessage For="@(() => blog.Description)" />
+            <br />
+            <button class="btn btn-success" type="submit">Add Blog</button>
+        </div>
+    </EditForm>
+}
+
+
+
+@code {
+    private Blog blog = new();
+    private bool saved = false;
+    private async Task SaveBlog()
+    {
+        await blogService.AddBlog(blog);
+        saved = true;
+    }
+
+}

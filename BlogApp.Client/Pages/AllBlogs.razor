@@ -1,0 +1,31 @@
+﻿@page "/AllBlogs"
+
+
+@inject IBlog blogService
+@inherits ComponentBase
+@inject NavigationManager navigate
+<center>
+    <h2>Blog App</h2>
+</center>
+<a class="btn btn-primary" href="/AddBlog" role="button">Add New Blog</a>
+<hr />
+
+@if(Blogs == null)
+{
+    <h3>No blogs found.....</h3>
+}
+else
+{
+    <h3>All Blogs</h3>
+    <DisplayBlogs Blogs=@Blogs/>
+}
+
+
+@code {
+    private IEnumerable<Blog> Blogs = null;
+
+    protected async override Task OnInitializedAsync()
+    {
+        Blogs = await blogService.GetAllBlogs();
+    }
+}
